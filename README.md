@@ -6,24 +6,26 @@ Bidirectional denormalization for your Mongoose models
 Example
 -------
 
-    var mongoose = require('mongoose');
-    var denormalize = require('mongoose-denormalize');
+```javascript
+var mongoose = require('mongoose');
+var denormalize = require('mongoose-denormalize');
 
-    var User = new mongoose.Schema({
-        username: String
-    });
+var User = new mongoose.Schema({
+    username: String
+});
 
-    var Post = new mongoose.Schema({
-        user: { type: mongoose.Schema.ObjectId, ref: 'User' }
-    });
-    
-    Post.plugin(denormalize, {
-        username: { from: 'user' }
-    });
-    
-    User.plugin(denormalize, {
-        username: { to: 'Post', ref: 'user' }
-    });
+var Post = new mongoose.Schema({
+    user: { type: mongoose.Schema.ObjectId, ref: 'User' }
+});
+
+Post.plugin(denormalize, {
+    username: { from: 'user' }
+});
+
+User.plugin(denormalize, {
+    username: { to: 'Post', ref: 'user' }
+});
+```
     
 Usage
 -----
