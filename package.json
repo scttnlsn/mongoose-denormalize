@@ -1,0 +1,22 @@
+{
+    "name":         "mongoose-denormalize",
+    "version":      "0.0.1",
+    "description":  "Bidirectional denormalization for your Mongoose models",
+    "homepage":     "http://github.com/scttnlsn/mongoose-denormalize",
+    "author":       "Scott Nelson <scottbnel@gmail.com>",
+    "main":         "./lib/index",
+    
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/scttnlsn/mongoose-denormalize.git"
+    },
+    
+    "dependencies": {
+        "async": ">= 0.1.18",
+        "mongoose": ">= 2.5.13"
+    },
+    
+    "devDependencies": {
+        "mocha": ">= 1.0.0"
+    }
+}
